@@ -1,0 +1,377 @@
+:root {
+    --primary: #00ADB5;
+    --secondary: #393E46;
+    --hitam: #222831;
+    --putih: #EEEEEE;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    padding: 0 10%;
+    background-color: var(--hitam);
+}
+
+.header__logo{
+    width: 220px;            
+}
+
+.header__menu{
+    display: flex;
+}
+
+.header__menu li{
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.header__menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+.header__menu li a:hover{
+    color: var(--primary);
+}
+
+.intro{
+    width: 80%;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.intro__title{
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.intro__desc{
+    color: #5b5b5b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.intro__content{
+    width: 50%;
+}
+
+.intro__cta{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+}
+
+.portfolio{
+    padding: 0 10%;
+    height: 60vh;
+    display: flex;
+    background-color: #fafafa;
+}
+
+.portfolio h2{
+    margin-bottom: 20px;
+}
+
+.portfolio__image, .portfolio__service{
+    display: flex;
+    /* flex-basis : digunakan untuk mengatur ukuran lebar dari item flex bernilai sama dengan nilai width */
+    flex-basis: 50%;
+    flex-direction: column;
+    /* justify-content : digunakan untuk mensejajarkan setiap items yang ada pada flex container */
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.portfolio__image img{
+    width: 80%;
+}
+
+.portfolio__service ol{
+    counter-reset: li;
+    list-style: none;
+}
+
+.portfolio__service ol li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.portfolio__service ol li:before{
+    content: counter(li);
+    counter-increment: li;
+    color: white;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.testimoni{
+    padding: 0 10%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimoni__title{
+    margin-bottom: 20px;
+}
+
+.testimoni__list{
+    display: flex;
+}
+
+.testimoni__box{
+    background-color: aqua;
+}
+
+.testimoni article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 33%;
+    border-radius: 25px;
+    padding: 20px;
+    height: 280px;
+    max-width: 280px;
+    margin: 0 20px;
+}
+
+.testimoni__profil{
+    display: flex;
+    align-items: center;
+}
+
+.testimoni__profil img{
+    margin-right: 20px;
+}
+
+footer{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: var(--hitam);
+    color: white;
+}
+
+.wa-btn{
+    background:green;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-decoration: none;
+    transition: ease all 0.3s;
+    position: fixed;
+    right: 30px;
+    bottom:30px;
+  }
+  .wa-btn:hover{
+    background: blue
+}
+
+.identitas{
+	background-color: var(--primary);
+	padding: 1rem;
+}
+
+.diri{
+	align-items: center;
+	margin: 10px auto;/*Agar tengah*/
+	display: flex;
+	max-width: 500px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.diri div{
+	flex-direction: column;
+}
+
+.diri img{
+	padding-left: 10px;
+	width: 40%;
+}
+
+.tim {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tim__title{
+    margin-bottom: 20px;
+}
+
+.tim__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tim__foto{
+    display: inline-block;
+    width: 220px;
+    padding: 0 80px;
+    font-size: 16px;
+    line-height: 80px;
+    border-radius: 40px;
+    background-color: #f1f1f1;
+    margin: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.tim__foto img {
+    float: left;
+    margin: 0 10px 0 -80px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.tim__foto .nama, .tim__foto .telp {
+    display: block;
+    line-height: 20px;
+    padding: 0 5px;
+}
+
+.tim__foto .nama {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.tim__foto .telp {
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #aaa;
+}
+
+.tim__foto .close {
+    font-size: 24px;
+    font-weight: bold;
+    color: #999;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    cursor: pointer;
+}
+
+.tim__foto:hover .close {
+    color: red;
+} 
+
+
+.cta{
+	background-color: var(--hitam);
+	display: flex;
+	padding: 2rem 2rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.cta div{
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 0 3rem 0 0;
+	line-height: 1.3;
+	margin-right: 5rem;
+}
+
+.cta button{
+	color: var(--hitam);
+	font-size: 1.5rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	background-color: white;
+	cursor: pointer;
+	padding: 1rem 2rem;
+}
+
+.cta button:hover{
+	background-color: var(--primary);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    body{
+        font-size: 14px;
+    }
+    .header {
+        flex-direction: column;
+        height: 0;
+        margin : 30px 0;
+    }
+    .header__logo{
+        margin-bottom: 20px;
+    }
+    .portfolio{
+        flex-direction: column;
+        height: 100%;
+    }
+    .testimoni{
+        height: 80vh;
+    }
+    .testimoni__list{
+        flex-direction: column;
+    }
+    .testimoni article{
+        margin-bottom: 20px;
+    }
+    .tim {
+        display: flex;
+        flex-direction: column;
+    }
+    .tim__list {
+        flex-direction: column;
+    }
+    .cta{
+		flex-direction: column;
+	}
+    footer{
+        flex-direction: column;
+    }
+}
