@@ -368,12 +368,23 @@ footer{
     .tim__list {
         flex-direction: column;
     }
+    .tim__foto {
+        width: auto;
+    }
+    .diri{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
     .cta{
 		flex-direction: column;
 	}
+    .cta button {
+        font-size: 1rem;
+    }
     .cta div{
-	font-size: 1rem;
-}
+	    font-size: 1rem;
+    }
     footer{
         flex-direction: column;
     }
