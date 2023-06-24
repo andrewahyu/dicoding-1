@@ -370,6 +370,7 @@ footer{
     }
     .tim__foto {
         width: auto;
+        margin: 10px;
     }
     .diri{
         display: flex;
@@ -380,6 +381,7 @@ footer{
 		flex-direction: column;
 	}
     .cta button {
+        margin-top: 10px;
         font-size: 1rem;
     }
     .cta div{
