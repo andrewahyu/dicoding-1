@@ -16,6 +16,10 @@ body{
 	scroll-behavior: smooth;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -26,16 +30,17 @@ body{
 }
 
 .header__logo{
-    width: 220px;            
+    width: 200px;            
 }
 
 .header__menu{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .header__menu li{
     list-style-type: none;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .header__menu li a{
@@ -49,28 +54,35 @@ body{
 
 .intro{
     background-color: var(--primary);
-    margin: 0 auto;
     height: 90vh;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     padding: 50px;
+}
+
+.intro__kiri, .intro__kanan{
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+}
+
+.intro__kanan img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 30%);
 }
 
 .intro__title{
     font-weight: 900;
     margin-bottom: 10px;
+    line-height: 2;
 }
 
 .intro__desc{
-    color: #5b5b5b;
-    line-height: 1.5;
+    line-height: 2;
     margin-bottom: 20px;
-}
-
-.intro__content{
-    width: 50%;
 }
 
 .intro__cta{
@@ -80,6 +92,7 @@ body{
     cursor: pointer;
     background-color: #000;
     color: white;
+    font-weight: 900;
 }
 
 .portfolio{
@@ -138,7 +151,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .testimoni__title{
@@ -352,21 +365,32 @@ footer{
     }
     .header {
         flex-direction: column;
-        height: 0;
-        margin : 30px 0;
+        height: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .header__logo{
         margin-bottom: 20px;
+        width: 150px;
     }
+    .intro{
+        flex-direction: column;
+        height: 100%;
+    }
+    
     .portfolio{
         flex-direction: column;
         height: 100%;
+    }
+    .portfolio__image img {
+        width: 60%;
     }
     .testimoni{
         align-items: unset;
     }
     .testimoni__list{
         flex-direction: column;
+        align-items: center;
     }
     .testimoni article{
         margin-bottom: 20px;
@@ -416,5 +440,6 @@ footer{
     }
     footer{
         flex-direction: column;
+        padding: 15px;
     }
 }
