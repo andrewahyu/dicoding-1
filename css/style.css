@@ -48,13 +48,14 @@ body{
 }
 
 .intro{
-    width: 80%;
+    background-color: var(--primary);
     margin: 0 auto;
     height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding: 50px;
 }
 
 .intro__title{
@@ -85,7 +86,6 @@ body{
     padding: 0 10%;
     height: 60vh;
     display: flex;
-    background-color: #fafafa;
 }
 
 .portfolio h2{
@@ -104,7 +104,7 @@ body{
 }
 
 .portfolio__image img{
-    width: 80%;
+    width: 100%;
 }
 
 .portfolio__service ol{
@@ -115,14 +115,14 @@ body{
 .portfolio__service ol li{
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .portfolio__service ol li:before{
     content: counter(li);
     counter-increment: li;
     color: white;
-    background-color: #d9d9d9;
+    background-color: var(--hitam);
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -134,15 +134,17 @@ body{
 
 .testimoni{
     padding: 0 10%;
-    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .testimoni__title{
     margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .testimoni__list{
@@ -150,7 +152,7 @@ body{
 }
 
 .testimoni__box{
-    background-color: aqua;
+    background-color:var(--hitam);
 }
 
 .testimoni article{
@@ -163,15 +165,22 @@ body{
     height: 280px;
     max-width: 280px;
     margin: 0 20px;
+    color: white;
+}
+
+article .testimoni__box p{
+    font-size: 10px;
 }
 
 .testimoni__profil{
+    margin-top: 10px;
     display: flex;
     align-items: center;
 }
 
 .testimoni__profil img{
     margin-right: 20px;
+    border-radius: 15px;
 }
 
 footer{
@@ -235,6 +244,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .tim__title{
@@ -269,7 +279,7 @@ footer{
     position: relative;
 }
 
-.tim__foto .nama, .tim__foto .telp {
+.tim__foto .nama, .tim__foto .posisi {
     display: block;
     line-height: 20px;
     padding: 0 5px;
@@ -278,10 +288,10 @@ footer{
 .tim__foto .nama {
     margin-left: 20px;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.tim__foto .telp {
+.tim__foto .posisi {
     margin-left: 20px;
     margin-top: 5px;
     font-size: 16px;
@@ -353,13 +363,14 @@ footer{
         height: 100%;
     }
     .testimoni{
-        height: 80vh;
+        align-items: unset;
     }
     .testimoni__list{
         flex-direction: column;
     }
     .testimoni article{
         margin-bottom: 20px;
+        font-size: 10px;
     }
     .tim {
         display: flex;
@@ -369,8 +380,19 @@ footer{
         flex-direction: column;
     }
     .tim__foto {
+        align-items: baseline;
+        flex-direction: column;
         width: auto;
         margin: 10px;
+        display: flex;
+        padding: 10px 5px 10px 5px;
+    }
+    .tim__foto .nama {
+        font-size: 16px;
+    }
+    
+    .tim__foto .posisi {
+        font-size: 14px;
     }
     .diri{
         display: flex;
@@ -385,7 +407,12 @@ footer{
         font-size: 1rem;
     }
     .cta div{
-	    font-size: 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: white;
+        font-weight: bold;
+        padding: 0;
+        margin-right: 0;
     }
     footer{
         flex-direction: column;
